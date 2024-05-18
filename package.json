@@ -1,6 +1,6 @@
 {
   "name": "simple-trello",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple trello makes easy implementation of trello api in your project.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
