@@ -1,7 +1,7 @@
 {
-  "name": "change-project-name",
-  "version": "1.0.2",
-  "description": "change-description.",
+  "name": "simple-trello",
+  "version": "0.0.1",
+  "description": "Simple trello makes easy implementation of trello api in your project.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -13,7 +13,8 @@
     "format:fix": "prettier --write .",
     "lint": "eslint --ext js,ts .",
     "lint:fix": "eslint --ext js,ts . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx}": [
@@ -26,18 +27,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/change-autor/change-project-name.git"
+    "url": "git+https://github.com/wesleyara/simple-trello.git"
   },
   "keywords": [
     "typescript",
     "javascript"
   ],
-  "author": "change-autor",
+  "author": "wesleyara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/change-autor/change-project-name/issues"
+    "url": "https://github.com/wesleyara/simple-trello/issues"
   },
-  "homepage": "https://github.com/change-autor/change-project-name#readme",
+  "homepage": "https://github.com/wesleyara/simple-trello#readme",
   "dependencies": {
     "axios": "^1.2.0",
     "rimraf": "^3.0.2"
