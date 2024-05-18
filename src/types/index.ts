@@ -4,3 +4,11 @@ export interface CreateCardProps {
   description: string;
   message?: string;
 }
+
+export interface GetListsProps {
+  boardId: string;
+}
+
+export interface GetCardsProps {
+  listId: string;
+}
