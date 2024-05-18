@@ -31,9 +31,71 @@ yarn add simple-trello
 
 # 🛠️ Tools
 
+For start using the `simple-trello` you need to create a trello api key and token. You can create it [here](https://trello.com/power-ups/admin).
 
+First step is create a instance of `SimpleTrello` class passing your key and token.
 
-# :pencil: Contributing
+```javascript
+// import libary
+import { SimpleTrello } from 'simple-trello';
+
+// create instance
+const simpleTrello = new SimpleTrello({
+  key: "your-key",
+  token: "your-token",
+});
+```
+
+after that you can use the methods to interact with trello api.
+
+## Create card
+
+```javascript
+// create new card
+const card = await simpleTrello.createCard({ listId, title, description });
+```
+
+## Get boards
+  
+```javascript
+// get all boards
+const boards = await simpleTrello.getBoards();
+```
+
+## Get lists
+
+```javascript
+// get all lists from board
+const lists = await simpleTrello.getLists({ boardId });
+```
+
+## Get cards
+
+```javascript
+// get all cards from list
+const cards = await simpleTrello.getCards({ listId });
+```
+
+# 🧪 Tests
+
+To run the tests you need to create a `.env` file in the root of the project with the following content:
+
+```env
+API_KEY=your-key
+API_TOKEN=your-token
+LIST_ID=your-list-id
+BOARD_ID=your-board-id
+```
+
+After that you can run the tests with the following command:
+
+```bash
+npm run test
+#or
+yarn test
+```
+
+# 📝 Contributing
 
 Your contribution to the `simple-trello` is essential for the evolution of the project, you can do it as follows:
 
@@ -42,7 +104,7 @@ Your contribution to the `simple-trello` is essential for the evolution of the p
 
 These are just some of the ways you can contribute to the project read the [CONTRIBUTING](https://github.com/wesleyara/simple-trello/blob/main/.github/CONTRIBUTING.md) for more information
 
-# :adult: Authors
+# 🧑 Authors
 
 <table>
   <tr>
@@ -69,6 +131,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-# :page_facing_up: License
+# 📄 License
 
 simple-trello is a open source project licensed as [MIT](LICENSE).
